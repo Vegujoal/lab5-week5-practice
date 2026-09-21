@@ -67,10 +67,22 @@ int main() {
     // ===== Resolve these TODOs later (Part E) =====
 
     // TODO (Part E): Create a LimitedEvent with dummy data.
+	LimitedEvent Event("Inter Create, 2026", 45);
     // TODO (Part E): Store the addresses of openEvent and your LimitedEvent
     // in two CampusEvent pointers. Call printDetails() through both pointers.
+	CampusEvent* ptr1 = &openEvent;
+    CampusEvent* ptr2 = &Event;
+
+	cout << "\n--- Polymorphism test ---" << endl;
+    ptr1->printDetails();
+    ptr2->printDetails();
     // TODO (Part E): Use largerValue with two int values and with two double values.
     // Print each result with a descriptive English label.
+	int maxInt = largerValue(15, 30);
+    double maxDouble = largerValue(45.5, 23.8);
 
+    cout << "\n--- Function template test ---" << endl;
+    cout << "Larger int: " << maxInt << endl;
+    cout << "Larger double: " << maxDouble << endl;
     return 0;
 }
